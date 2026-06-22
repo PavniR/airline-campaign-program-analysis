@@ -110,3 +110,7 @@ Incorporate additional behavioral variables such as flight routes, booking frequ
   * `table-creation.sql` 
   * `data-validation.sql`
 * `Report.pdf` *(The final report containing written insights and visuals)*
+
+---
+*AUTHOR*
+*Pavni Rastogi*
