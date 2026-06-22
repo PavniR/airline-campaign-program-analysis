@@ -112,5 +112,5 @@ Incorporate additional behavioral variables such as flight routes, booking frequ
 * `Report.pdf` *(The final report containing written insights and visuals)*
 
 ---
-*AUTHOR*
+## *AUTHOR*
 *Pavni Rastogi*
