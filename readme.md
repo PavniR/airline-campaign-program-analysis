@@ -19,17 +19,23 @@ This analysis was built to answer these key business questions:
 ## 3. Technical Approach & Data Architecture
 I handled the entire data project using three main steps:
 
-1. **Data Cleaning & Preparation (Python):** * Used Python to fix data quality issues, like finding and removing duplicate rows in the massive flight activity data.
+1. **Data Cleaning & Preparation (Python):** Used Python to fix data quality issues, like finding and removing duplicate rows in the massive flight activity data.
    * Fixed missing values, such as empty spaces in the customer salary column.
    * Combined different data tables together to create one clean master file (`final_customer_data.csv`).
 2. **Database Analysis (SQL):**
    * Loaded the clean data into a database to write queries.
    * Wrote SQL queries to calculate customer groups, signup trends by month, and cancellation rates.
-3. **Data Visualization (Matplotlib & Seaborn):**
-   * Built a clean dashboard-style layout using a standard 16:9 widescreen format.
-   * Used simple corporate colors to highlight the most important facts so the charts are easy to read at a glance.
+3. **Data Visualization (Power BI)**
+   * Built a 2-page interactive Power BI dashboard to present key business insights through executive-level reporting. 
+   * The dashboard features dynamic KPI cards, campaign performance analysis, enrollment trends, customer segmentation, loyalty tier analysis, CLV insights, and geographic member distribution. 
+   * Interactive slicers and custom DAX measures enable stakeholders to explore loyalty program performance and evaluate the effectiveness of the 2018 marketing campaign.
 
 ---
+
+#### Power BI Dashboard Demo:
+
+![Dashboard-demo](dash-demo.gif)
+
 
 ## 4. Key Findings
 
@@ -71,25 +77,13 @@ Using SQL queries, I isolated two specific groups of active customers that the a
 Incorporate additional behavioral variables such as flight routes, booking frequency, and redemption patterns to build predictive churn and customer value models.
 
 ---
-### File Structure:
-## 7. Repository Structure
-* `data/`
-  * `raw-files/`
-    * `Customer Flight Activity.csv` *(Original uncleaned flight logs)*
-    * `Customer Loyalty History.csv` *(Original uncleaned profile data)*
-    * `calendar.csv` *(Original date dimension file)*
-  * `cleaned-files/`
-    * `final_customer_data.csv` *(The master file used for the final analysis)*
-    * `flight_activity_cleaned.csv` *(Cleaned flight records with duplicates removed)*
-    * `loyalty_history_cleaned.csv` *(Cleaned customer profiles with correct data types)*
-    * `calendar_clean.csv` *(Cleaned calendar references)*
-* `notebooks/`
-  * `airline.ipynb` *(Jupyter Notebook with Python data cleaning and plots)*
-* `sql/`
-*Main scripts containing business analysis queries*
-  * `analysis-and-segmentation.sql`
-  * `customer-understanding.sql` 
-*scripts containing loading data & initial data validation*
-  * `table-creation.sql` 
-  * `data-validation.sql`
-* `Report.pdf` *(The final report containing written insights and visuals)*
+
+## 7. Power BI Data Modelling:
+
+Power BI Data Model: Built using a star-schema-inspired design with separate Customer, Flight Activity, Calendar, and Measures tables to support scalable DAX calculations and interactive reporting.
+
+![data modelling](data-model.png)
+
+#### Pavni Rastogi
+
+---
