@@ -46,7 +46,26 @@ report file document --> [Report (pdf)](./report.pdf)
 * **Delayed Success:** The campaign also helped create brand awareness, leading to another **1,847 signups** right after the promotion ended.
 
 ### B. Customer Loyalty & Cancellation Rates
-* **Good Quality Retention:** Usually, people who sign up during a big discount or promotion cancel quickly. However, the data shows the campaign cohort actually had a lower cancellation rate (**11.84%**) than the historical baseline of older members (**13.92%**). 
+* **Overall observed cancellation:** Campaign-period customers had an observed cancellation rate of **11.84%**, compared with **13.92%** for pre-campaign customers. Because cohorts have different observation periods, this comparison should be interpreted alongside the fixed-horizon cohort analysis above.
+
+### Cohort Retention Analysis
+
+Overall cancellation rates can be misleading because older customers have had more time to cancel. To make the comparison fairer, retention was measured at fixed intervals after enrollment.
+
+Only customers with sufficient observation time were included for each retention horizon.
+
+| Cohort | 3-month eligible | 3-month retention | 6-month eligible | 6-month retention | 12-month eligible | 12-month retention |
+|---|---:|---:|---:|---:|---:|---:|
+| Pre-Campaign | 13,919 | 99.52% | 13,919 | 98.99% | 13,727 | 91.23% |
+| Campaign | 971 | 99.38% | 971 | 99.07% | 0 | N/A |
+| Post-Campaign | 1,363 | 99.78% | 747 | 98.80% | 0 | N/A |
+
+### Interpretation
+
+- Campaign-period customers showed strong short-term retention: **99.38% after 3 months** and **99.07% after 6 months**.
+- Their short-term retention was broadly comparable to the pre-campaign cohort.
+- A 12-month campaign retention rate could not be calculated because the campaign cohort did not have a full 12-month observation period.
+- These results show that the campaign was not associated with unusually high early cancellations, but they do not prove that the campaign caused better retention.
 
 ### C. Loyalty Card Tier Inversion
 * **Tier Misalignment:** The data revealed a unexpected tier-value mismatch with the card tiers. Customers in the "Star" tier actually have the lowest average salary and the lowest average Customer Lifetime Value (CLV) at **$6,741.76**.

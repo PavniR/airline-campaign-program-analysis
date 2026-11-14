@@ -165,3 +165,28 @@ where enrollment_type = '2018 Promotion'
 and active_months <= 3
 order by avg_flights_per_active_month asc, clv desc;
 --118
+
+---------COHORT RETENTION ANALYSIS---------
+with cohort_data as(
+select case when enrollment_date<date '2018-02-01' then 'pre-campaign' when enrollment_date between date '2018-02-01' and date '2018-04-30' 
+then 'campaign' else 'post-campaign' end as cohort, enrollment_date, cancellation_date
+from final_customer_data
+),
+
+eligible_customers as(
+select cohort, enrollment_date, cancellation_date, date '2018-12-31' - enrollment_date as observed_days
+from cohort_data
+)
+
+select cohort,
+count(*) filter (where observed_days >= 90) as eligible_3_month_customers,
+round(100.0 * avg(case when cancellation_date is null or cancellation_date>enrollment_date + interval '90 days' then 1 else 0 end) 
+filter (where observed_days >= 90), 2) as retention_3_months,
+count(*) filter (where observed_days >= 180) as eligible_6_month_customers,
+round(100.0 * avg(case when cancellation_date is null or cancellation_date>enrollment_date + interval '180 days' then 1 else 0 end) 
+filter (where observed_days >= 180), 2) as retention_6_months,
+count(*) filter (where observed_days >= 365) as eligible_12_month_customers,
+round(100.0 * avg(case when cancellation_date is null or cancellation_date>enrollment_date + interval '365 days' then 1 else 0 end) 
+filter (where observed_days >= 365), 2) as retention_12_months
+from eligible_customers
+group by cohort;
