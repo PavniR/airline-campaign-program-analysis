@@ -91,6 +91,10 @@ Using SQL queries, I isolated two specific groups of active customers that the a
 * **Fix Card Tier Rules:** Adjust the entry requirements for Star, Nova, and Aurora tiers so that a customer's status matches up linearly with their actual spending and income.
 * **Keep Using Short Promotions:** Run similar short signup promotions once a year, since the 2018 data proves it brings in lots of high-quality customers who actually stay loyal.
   
+## Illustrative Business Impact Scenario
+
+This is a scenario estimate, not a causal campaign result. The analysis surfaced **619 active-but-dormant members** and **668 high-flight members with no point redemptions**. Re-engaging 10% of dormant members would create approximately **62 reactivation candidates**, while converting 15% of high-flight non-redeemers to a redemption journey would create approximately **100 targeted members**. These targets should be evaluated with response, incremental flight, redemption, and margin data.
+
 ---
 
 ## 6. Tools used:
