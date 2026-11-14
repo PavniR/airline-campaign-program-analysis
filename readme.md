@@ -89,7 +89,7 @@ Using SQL queries, I isolated two specific groups of active customers that the a
 * **Push Point Redemptions:** Send a targeted email to the 668 active non-redeemers offering easy ways to spend their points (like one-click seat upgrades) to clear that points backlog off the airline's books.
 * **Regional Sprints for Inactive Members:** Target the 619 dormant accounts with local flight deals, focusing on big areas like Ontario and British Columbia to get them flying again.
 * **Fix Card Tier Rules:** Adjust the entry requirements for Star, Nova, and Aurora tiers so that a customer's status matches up linearly with their actual spending and income.
-* **Keep Using Short Promotions:** Run similar short signup promotions once a year, since the 2018 data proves it brings in lots of high-quality customers who actually stay loyal.
+* **Keep Testing Short Promotions:** Run similar signup promotions with a controlled holdout group, since the 2018 campaign generated 971 members with strong observed short-term retention, while acknowledging that the analysis does not prove causal lift.
   
 ## Illustrative Business Impact Scenario
 
